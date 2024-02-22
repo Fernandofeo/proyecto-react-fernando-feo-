@@ -1,3 +1,5 @@
+import tailwindConfig from "../../../tailwind.config"
+
 //import classes from './NavBar.module.css '
 import CardWidget from "../CardWidget/CardWidget"
 
