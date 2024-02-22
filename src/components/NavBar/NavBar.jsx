@@ -6,9 +6,9 @@ import CardWidget from "../CardWidget/CardWidget"
 const NavBar=() => { 
     return (
        <header> 
-            <nav style={{ backgroundColor: 'black'}}> 
-                 <h3 style={ { color: 'green', fontSize: 15}}> Distri Fer </h3>
-             <div style={ {color : 'yellow', display :`flex`, fontSize: 10, textAlign : `center` }} > 
+            <nav style={{ backgroundColor: 'green'}}> 
+                 <h3 style={ { color: 'red ',display:`flex`, fontSize: 15, textAlign:`center `}}> Distri Fer </h3>
+             <div style={ {color : 'yellow', display :'flex', fontSize: 5, textAlign : `center` }} > 
                 <button > Chocolates </button>
                 <button> Chicles </button>
                 <button> Caramelos </button >
