@@ -1,6 +1,6 @@
 const Item = ( { id, name, img , price, stock } ) => { 
     return ( 
-        <article>
+        <article key={id}>
             <header>
                 <h2> { name} </h2>
             </header>
@@ -16,7 +16,7 @@ const Item = ( { id, name, img , price, stock } ) => {
                 </p>
             </section>
             <footer> 
-                <button> Ver detalle </button>
+               <link to={ `/proyecto-react/src/components/Item/Item.jsx/${id}`}> Ver detalle   </link>
             </footer>
         </article>
     )
