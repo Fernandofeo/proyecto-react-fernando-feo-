@@ -1,22 +1,19 @@
 import { NavLink } from "react-router-dom"
-import tailwindConfig from "../../../tailwind.config"
-
-//import classes from './NavBar.module.css '
 import CardWidget from "../CardWidget/CardWidget"
-
+import { Link } from "react-router-dom"
 
 
 const NavBar=() => { 
     return (
        <header> 
-            <nav style={{ backgroundColor: 'green'}}> 
+            <nav style={{ backgroundColor: 'green' ,  display: `flex`, justifyContent : `space-between` , alignItems : 'center'}}> 
                <link to = '/'> 
                  <h3 style={ { color: 'red ',display:`flex`, fontSize: 15, textAlign:`center `}}> Distri Fer </h3>
                </link>
              <div style={ {color : 'yellow', display :'flex', fontSize: 5, textAlign : `center` }} > 
-               <NavLink to={'/category/Chocolates'} className={({isActive}) => isActive ? 'ActiveOption' : `Option `}> Chocolates</NavLink>
-               <NavLink to={'/category/Cafe '} className={({isActive}) => isActive ? 'ActiveOption' : `Option `}> Cafe  </NavLink>
-               <NavLink to={'/category/Budin'} className={({isActive}) => isActive ? 'ActiveOption' : `Option `}> Budin</NavLink>
+               <Link to={'/category/Chocolates'} className={({isActive}) => isActive ? 'ActiveOption' : `Option `}> Chocolates</Link>
+               <Link to={'/category/Cafe '} className={({isActive}) => isActive ? 'ActiveOption' : `Option `}> Cafe  </Link>
+               <Link to={'/category/Budin'} className={({isActive}) => isActive ? 'ActiveOption' : `Option `}> Budin</Link>
 
                 <button > Chocolates </button>
                 <button> Cafe</button>

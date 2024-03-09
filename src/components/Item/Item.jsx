@@ -7,7 +7,7 @@ const Item = ( { id, name, img , price, stock } ) => {
                 <h2> { name} </h2>
             </header>
             <picture> 
-                <img src={img} alt= {name}/>
+                <img src={img} style={{ width: 100}} alt= {name}/>
             </picture>
             <section> 
                 <p>
@@ -18,7 +18,7 @@ const Item = ( { id, name, img , price, stock } ) => {
                 </p>
             </section>
             <footer> 
-               <link to={ '/item/:itemId'}> Ver detalle   </link>
+               <link to={ `/item/${id}`}> Ver detalle   </link>
             </footer>
         </article>
     )
