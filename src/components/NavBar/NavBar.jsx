@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom"
-import CardWidget from "../CardWidget/CardWidget"
 import { Link } from "react-router-dom"
+import CardWidget from "../CardWidget/CardWidget"
+
 
 
 const NavBar=() => { 
@@ -11,9 +11,9 @@ const NavBar=() => {
                  <h3 style={ { color: 'red ',display:`flex`, fontSize: 15, textAlign:`center `}}> Distri Fer </h3>
                </link>
              <div style={ {color : 'yellow', display :'flex', fontSize: 5, textAlign : `center` }} > 
-               <Link to={'/category/Chocolates'} className={({isActive}) => isActive ? 'ActiveOption' : `Option `}> Chocolates</Link>
-               <Link to={'/category/Cafe '} className={({isActive}) => isActive ? 'ActiveOption' : `Option `}> Cafe  </Link>
-               <Link to={'/category/Budin'} className={({isActive}) => isActive ? 'ActiveOption' : `Option `}> Budin</Link>
+               <Link to={'/category/Chocolates'} > Chocolates</Link>
+               <Link to={'/category/Cafe '} > Cafe  </Link>
+               <Link to={'/category/Budin'} > Budin</Link>
 
                 <button > Chocolates </button>
                 <button> Cafe</button>
@@ -28,4 +28,3 @@ const NavBar=() => {
 }
 
 export default NavBar
-
