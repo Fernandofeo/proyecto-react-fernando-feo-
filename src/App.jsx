@@ -19,7 +19,7 @@ function App() {
         <Routes> 
           <Route path='/' element= {<ItemListConteiner greeting ={ 'Bienvenidos a Distri Fer '} />} > </Route>
           <Route path='/category/:categoryId' element = {<ItemListConteiner greeting={ `producto de la categoria`}/>} ></Route>
-          <Route path='/item/:itemId' element = { <ItemDetailContainer/> }></Route>
+          <Route path='/Item/:ItemId' element = { <ItemDetailContainer/> }></Route>
           <Route path='* ' element= { <h1> 404 </h1>}></Route>
         </Routes>      
       </BrowserRouter> 
