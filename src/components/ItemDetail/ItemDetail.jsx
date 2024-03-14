@@ -2,14 +2,14 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail =({ id , name , img , category , description , price , stock}) => {
     return( 
-        <article >
-            <header>
+        <article style={ {display : `grid `, textAlign : `center`, backgroundColor : ``}} >
+            <header >
                 <h2> {name} </h2>
             </header>
             <picture>
-                <img src= {img} alt={name}/>
+                <img src= {img} alt={name} style={ {maxWidth : 100}}/>
             </picture>
-            <section>
+            <section >
                 <p> Categoria : {category}  </p>
                 <p> Descripcion : {description} </p>
                 <p> Precio : { price}   </p>

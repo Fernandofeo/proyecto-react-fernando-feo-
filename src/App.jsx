@@ -3,7 +3,6 @@ import { BrowserRouter, Routes , Route } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import ItemListConteiner from './components/ItemListConteiner/ItemListConteiner'
 import ItemDetailContainer from './components/ItemDetailConteiner/ItemDetailConteiner'
-import ItemCount from './components/ItemCount/ItemCount'
 
 
 
@@ -14,9 +13,9 @@ function App() {
   return (
    
     <div>
-     <BrowserRouter>
+     <BrowserRouter >
         <NavBar/>
-        <Routes> 
+        <Routes > 
           <Route path='/' element= {<ItemListConteiner greeting ={ 'Bienvenidos a Distri Fer '} />} > </Route>
           <Route path='/category/:categoryId' element = {<ItemListConteiner greeting={ `Bienvenidos `}/>} ></Route>
           <Route path='/item/:itemId' element = { <ItemDetailContainer/> }></Route>
