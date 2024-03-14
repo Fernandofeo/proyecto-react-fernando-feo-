@@ -2,7 +2,7 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail =({ id , name , img , category , description , price , stock}) => {
     return( 
-        <article>
+        <article >
             <header>
                 <h2> {name} </h2>
             </header>
@@ -10,18 +10,13 @@ const ItemDetail =({ id , name , img , category , description , price , stock}) 
                 <img src= {img} alt={name}/>
             </picture>
             <section>
-                <p>
-                    Categoria : {category}
-                </p>
-                <p> 
-                    Descripcion : {description}
-                </p>
-                <p>
-                    Precio : { price}
-                </p>
+                <p> Categoria : {category}  </p>
+                <p> Descripcion : {description} </p>
+                <p> Precio : { price}   </p>
+                <p>Disponible: {stock} </p>
             </section>
             <footer>
-                <ItemCount initial={1} stock={stock} onAdd={(quantity)=>console.log('Cantidad agregada')}/>
+                <ItemCount initial={1} stock= {stock} onAdd={(quantity) => console.log('Cantidad agregada')}/>
             </footer>
         </article>
     )

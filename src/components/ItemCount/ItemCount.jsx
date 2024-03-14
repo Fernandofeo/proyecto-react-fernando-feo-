@@ -1,18 +1,18 @@
 import { useState } from "react" 
 
 
-const ItemCount = ({initial, stock, onAdd}) =>{
+const ItemCount = ({initial = 1, stock, onAdd}) =>{
     const [ quantity , setQuantity]= useState ( initial )
 
 const increment = () => {
     if (quantity < stock){ 
-        setQuantity ( quantity + 1)
+        setQuantity ( prev => prev + 1)
     }
 }
 
 const decrement = () => {
     if ( quantity > 0){
-        setQuantity (quantity - 1 )
+        setQuantity ( prev => prev - 1 )
     }
 }
 return ( 
