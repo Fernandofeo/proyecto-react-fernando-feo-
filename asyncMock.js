@@ -40,10 +40,9 @@ export const getProducts = () =>{
     return new Promise  ((resolve ) => { 
         setTimeout (() => { 
             resolve ( products )
-        }, 1000 )
+        }, 100 )
     } )
 }
-
 export const getProductsByCategory = (categoryId) => {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -56,6 +55,6 @@ export const getProductsById =(itemId) => {
     return new Promise ((resolve) => { 
         setTimeout(() => { 
             resolve(products.find( prod=> prod.id === itemId))
-        } , 1000)
+        } , 100)
     })
 }
