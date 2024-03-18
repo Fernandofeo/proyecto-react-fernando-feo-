@@ -12,7 +12,7 @@ const products = [
         id:'2',
         name: 'Vizzio ',
         price: '450',
-        category: 'chocolate ',
+        category: 'chocolate',
         stock: '25',
         img: 'https://bonafide.com.ar/media/2021/06/VIZZIO-Laminas-1024x1024_0000s_0011_RENDERS-VIZZIO-MANI-165g-510x510.jpg',
         description : `Chocolate vizzio `
@@ -21,7 +21,7 @@ const products = [
         id:'3',
         name: 'Budin',
         price: '1500',
-        category: 'budin ',
+        category: 'budin',
         stock: '30',
         img: 'https://bonafide.com.ar/media/2020/07/Render_Budin_VainillaN1024-510x510.jpg' , 
         description : `budines `
@@ -30,7 +30,7 @@ const products = [
         id:'4',
         name: 'Cafe',
         price: '2500',
-        category: 'cafe ',
+        category: 'cafe',
         stock: '50',
         img: 'https://bonafide.com.ar/media/2022/05/Sensaciones-Suave-125g-2-1-1-1-1-1-1-1-510x754.png',
         description : ` tipo de cafe  ` 

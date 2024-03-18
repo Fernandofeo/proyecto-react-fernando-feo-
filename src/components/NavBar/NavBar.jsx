@@ -13,7 +13,7 @@ const NavBar=() => {
                  <h3 onClick={() => navigate('/')} style={ { color: 'white  ',display:`flex`, fontSize: 15, textAlign:`center `}}> Distri Fer </h3>
                </Link>
              <div style={ {color : 'white', display :'flex', fontSize: 18, textAlign : `center` }} > 
-               <Link to={'/category/chocolates'} style={{padding : 5, margin : 15}}> Chocolates</Link>               
+               <Link to={'/category/chocolate'} style={{padding : 5, margin : 15}}> Chocolates</Link>               
                <Link to={'/category/cafe'} style={{padding : 5, margin: 15}}> Cafe  </Link>                  
                <Link to={'/category/budin'} style={ {padding : 5, margin: 15}} > Budin</Link>
               </div >
