@@ -1,10 +1,30 @@
 import { Link, useNavigate } from "react-router-dom"
 import CardWidget from "../CardWidget/CardWidget"
+import { useEffect, useState } from "react"
+import {collection, getDocs, orderBy, query, limit  } from "firebase/firestore"
+import { db } from "../../service/firebase/firebaseConfig"
 
 
 
 const NavBar=() => { 
+  const [categories ,setCategories] = useState([])
   const navigate= useNavigate()
+
+  useEffect(() => {
+    const categoriesCollection = query(collection(db, 'categories'), orderBy('order', 'asc'))
+    
+    getDocs(categoriesCollection)
+        .then(querySnapshot => {
+            const categoriesAdapted = querySnapshot.docs.map(doc => {
+                const data = doc.data()
+                return { id: doc.id, ...data}
+            })
+            setCategories(categoriesAdapted)
+        })
+        .catch(error => {
+            console.error('error')
+        })
+}, [])
 
   return (
        <header> 
