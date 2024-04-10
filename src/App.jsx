@@ -1,33 +1,39 @@
-import Navbar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListConteiner/ItemListConteiner'
-import ItemDetailContainer from './components/ItemDetailConteiner/ItemDetailConteiner'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { CartProvider } from './context/CartContext'
-import CartView from './components/CartView/CartView'
-import Checkout from './components/Checkout/Checkout'
+import './App.css';
+import Navbar from './component/Navbar/navbar';
+import ItemListContainer from './component/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './component/ItemDetailContainer/ItemdetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState, createContext } from 'react';
+import { CartProvider } from './Context/CartContext';
+import { NotificationProvider } from './Notificacion/NotificationService'
+import CartView from './component/CartView/CartView'
+import Checkout from './component/Checkout/Checkout';
 
-function App() {
- 
+
+
+const App = () => {
+
 
   return (
-   
-    <div>
-     <BrowserRouter >
-        <CartProvider> 
-          <Navbar/>
-          <Routes > 
-            <Route path='/' element= {<ItemListContainer greeting ={ 'Bienvenidos a Distri Fer '} />} > </Route>
-            <Route path='/category/:categoryId' element = {<ItemListContainer greeting={ `Bienvenidos `}/>} />
-            <Route path='/item/:itemId' element = { <ItemDetailContainer/> }></Route>
-            <Route path='/cart' element ={<CartView/>}></Route>
-            <Route path='/Checkout' element ={ <Checkout/>} > </Route>
-           <Route path='* ' element= { <h1> 404 </h1>}></Route>
-          </Routes>    
-        </CartProvider>
-      </BrowserRouter> 
-   
-   </div>
-  )
+    <>
+      <BrowserRouter>
+        <NotificationProvider>
+          <CartProvider>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<ItemListContainer greeting='Bienvenido a Distri Fer ' />} />
+              <Route path='/category/:category' element={<ItemListContainer greeting='Productos de la Categoria' />} />
+              <Route path='/itemId/:itemId' element={<ItemDetailContainer />} />
+              <Route path='/cart' element={<CartView/>}/>
+              <Route path='/Checkout' element ={<Checkout/>}/>
+            </Routes>
+          </CartProvider>
+        </NotificationProvider>
+      </BrowserRouter>
+
+    </>
+  );
 }
 
 export default App
+
